@@ -14,7 +14,7 @@ npm install
 
 # Changing the Input
 
-Inside of input.txt you will find the three lines that correspond to the function, interval, and error input. For the function keep it in the form f(x) = "something" and use the symbols +, -, *, /, and ^ to represent addition, subtraction, multiplication, division, and exponentiation respectively. 
+Inside of input.txt you will find the three lines that correspond to the function, interval, and error input. For the function keep it in the form <a href="https://www.codecogs.com/eqnedit.php?latex=f(x)&space;=&space;"\textup{something}"" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f(x)&space;=&space;"\textup{something}"" title="f(x) = "\textup{something}"" /></a> and use the symbols +, -, *, /, and ^ to represent addition, subtraction, multiplication, division, and exponentiation respectively. 
 
 
 # Expected Output
