@@ -1,15 +1,26 @@
+<h1 align="center">JS Implementation of Bisection Method</h1>
+
+
+# Table of Contents
+
+- [Introduction](#introduction)
+- [Setting Up](#setting-up)
+- [Changing the Input](#changing-the-input)
+- [Expected Output](#expected-output)
+- [Running the Code](#running-the-code)
+
+
 # Introduction
 
 Given a continuous function <a href="https://www.codecogs.com/eqnedit.php?latex=f(x)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f(x)" title="f(x)" /></a> on a compact interval <a href="https://www.codecogs.com/eqnedit.php?latex=[a,b]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?[a,b]" title="[a,b]" /></a>, for any <a href="https://www.codecogs.com/eqnedit.php?latex=f(a)&space;\leq&space;L&space;\leq&space;f(b)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f(a)&space;\leq&space;L&space;\leq&space;f(b)" title="f(a) \leq L \leq f(b)" /></a> (assuming <a href="https://www.codecogs.com/eqnedit.php?latex=f(a)&space;<&space;f(b)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f(a)&space;<&space;f(b)" title="f(a) < f(b)" /></a>) there always exists a <a href="https://www.codecogs.com/eqnedit.php?latex=a&space;\leq&space;c&space;\leq&space;b" target="_blank"><img src="https://latex.codecogs.com/gif.latex?a&space;\leq&space;c&space;\leq&space;b" title="a \leq c \leq b" /></a> such that <a href="https://www.codecogs.com/eqnedit.php?latex=f(c)&space;=&space;L" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f(c)&space;=&space;L" title="f(c) = L" /></a> by the Intermediate Value Theorem. The disadvantage of this theorem is that it does not provide a means of actually determining the value of <a href="https://www.codecogs.com/eqnedit.php?latex=c" target="_blank"><img src="https://latex.codecogs.com/gif.latex?c" title="c" /></a>. Perhaps the simplest algorithm that tackles this issue is the Bisection Method which works for any continuous function on a compact interval and is implemented in this repository. 
 
 
-# Dependencies
-
-Begin by installing the necessary dependencies:
-
+# Setting Up
+I have to assume that you have npm and git installed and so in order to get started first copy the repository over to your local machine. Inside the root directory of the project as administrator run:
 ```js
 npm install
 ```
+This will handle the installation of all node_modules.
 
 
 # Changing the Input
