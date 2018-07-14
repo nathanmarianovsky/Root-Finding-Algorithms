@@ -1,6 +1,6 @@
 Function:
-f(x) = x^2-2
+f(x) = x^2 - 2
 Interval:
-[1,2]
+[0,2]
 Error:
-0.1
+0.000001
