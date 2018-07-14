@@ -1,0 +1,6 @@
+Function:
+f(x) = x^2-2
+Interval:
+[1,2]
+Error:
+0.1
