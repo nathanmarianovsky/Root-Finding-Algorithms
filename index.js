@@ -34,7 +34,7 @@ var bisect = (f, interval) => {
 	return interval;
 };
 
-// Iterates through the Bisection Method until a desired value is found or breaks after one million steps.
+// Iterates through the Bisection Method until a desired value is found or break after one million steps.
 var main = (f, interval, error) => {
 	if(f(interval[0]) == 0) { return interval[0]; }
 	if(f(interval[1]) == 0) { return interval[1]; }
