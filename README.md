@@ -36,7 +36,6 @@ The output will always be up to 15 significant digits.
 # Running the Code
 
 In the terminal simply run:
-
 ```js
 node index.js
 ```
