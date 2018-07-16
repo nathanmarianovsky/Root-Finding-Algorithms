@@ -35,7 +35,7 @@ var bisect = (f, interval) => {
 };
 
 // Iterates through the Bisection Method until a desired value is found or breaks after one million steps.
-var main = (f, interval, error) => {
+var main = (f, interval, error, timer) => {
 	if(f(interval[0]) == 0) { return interval[0]; }
 	if(f(interval[1]) == 0) { return interval[1]; }
 	var count = 0;
@@ -43,6 +43,8 @@ var main = (f, interval, error) => {
 		if(count == 10000) { console.log("After ten thousand steps " +
 			"there is still no value of x that satisfies the condition with the given error.") }
 		else if(count == 1000000) { 
+			timer = process.hrtime(timer).toString().split(",");
+			console.log("Bisection Method: " + timer[0] + " seconds and " + timer[1] + " nanoseconds");
 			console.log("After one million steps there is still no value of x that satisfies " + 
 				"the condition and this is enough to convince us that there might not be such a value " + 
 				"or the interval was just not tight enough!");
@@ -65,9 +67,12 @@ fs.readFile("input.txt", "utf8", (err, data) => {
 		parser = new math.parser();
 	try {
 		parser.eval(rows[1]);
-		var func = parser.get("f");
-		var result = main(func, [left, right, 0], control);
+		var func = parser.get("f"),
+			timer = process.hrtime();
+		var result = main(func, [left, right, 0], control, timer);
 		if(result != "UNDEFINED") {
+			timer = process.hrtime(timer).toString().split(",");
+			console.log("Bisection Method: " + timer[0] + " seconds and " + timer[1] + " nanoseconds");
 			console.log("The first value of x inside " + rows[3].replace(/ /g,'') + " that makes |f(x)| < " + control + " is " + result.toPrecision(15));
 		}
 	}
