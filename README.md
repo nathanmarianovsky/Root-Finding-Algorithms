@@ -51,3 +51,8 @@ For the parameter you have the following options:
 - If param = NM then only Newton's Method will be calculated.
 - If param = HM then only Halley's Method will be calculated.
 - If param = SM then only the Secant Method will be calculated.
+In the case you want a combination of two or more methods to be calculated then keep on adding the parameters, i.e.:
+```js
+node index.js -SM -BM
+```
+will perform the Bisection and Secant Methods.
