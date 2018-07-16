@@ -162,6 +162,7 @@ fs.readFile("input.txt", "utf8", (err, data) => {
 		secant1 = undefined,
 		start = undefined,
 		control = parseFloat(rows[9]),
+		indicator = process.argv.some(elem => elem == "-all") || process.argv.length == 2,
 		parser = new math.parser();
 	try {
 		parser.eval(rows[1]);
@@ -172,7 +173,7 @@ fs.readFile("input.txt", "utf8", (err, data) => {
 		var func = parser.get("f"),
 			der = parser.get("g"),
 			secder = parser.get("h");
-		if(rows[3].length != 0) {
+		if(rows[3].length != 0 && (indicator || process.argv.some(elem => elem == "-BM"))) {
 			try {
 				left = parseFloat(rows[3].split(",")[0].split("[")[1]);
 				right = parseFloat(rows[3].split(",")[1].split("]")[0]);
@@ -199,7 +200,7 @@ fs.readFile("input.txt", "utf8", (err, data) => {
 				console.log("There was a problem parsing the interval you provided on line 4!");
 			}
 		}
-		if(rows[5].length != 0) {
+		if(rows[5].length != 0 && (indicator || process.argv.some(elem => elem == "-NM"))) {
 			try {
 				start = parseFloat(rows[5]);
 			}
@@ -225,7 +226,7 @@ fs.readFile("input.txt", "utf8", (err, data) => {
 				console.log("There was a problem parsing the starting point you provided on line 6!");
 			}
 		}
-		if(rows[5].length != 0) {
+		if(rows[5].length != 0 && (indicator || process.argv.some(elem => elem == "-HM"))) {
 			try {
 				start = parseFloat(rows[5]);
 			}
@@ -233,7 +234,7 @@ fs.readFile("input.txt", "utf8", (err, data) => {
 				console.log("There was a problem parsing the starting point you provided on line 6!");
 			}
 			if(!isNaN(start)) {
-				if((isNaN(left) || isNaN(right)) && isNaN(start)) { console.log(""); }
+				if((isNaN(left) || isNaN(right)) && !(indicator || process.argv.some(elem => elem == "-NM"))) { console.log(""); }
 				console.log("------------------------------------------------------------------------------------------------------");
 				var timerHM = process.hrtime(),
 					resultHM = main(func, der, secder, control, timerHM, "HM", start);
@@ -251,7 +252,7 @@ fs.readFile("input.txt", "utf8", (err, data) => {
 				console.log("There was a problem parsing the starting point you provided on line 6!");
 			}
 		}
-		if(rows[7].length != 0) {
+		if(rows[7].length != 0 && (indicator || process.argv.some(elem => elem == "-SM"))) {
 			try {
 				secant0 = parseFloat(rows[7].split(",")[0].split("[")[1]);
 				secant1 = parseFloat(rows[7].split(",")[1].split("]")[0]);
@@ -278,13 +279,14 @@ fs.readFile("input.txt", "utf8", (err, data) => {
 				console.log("There was a problem parsing the starting points you provided on line 8!");
 			}
 		}
-		if((!isNaN(left) && !isNaN(right)) || !isNaN(start) || (!isNaN(secant0) && !isNaN(secant1)) || 
-			rows[3].length > 0 || rows[5].length > 0 || rows[7].length > 0) {
+		if(process.argv.some(elem => elem == "BM" || elem == "NM" || elem == "HM" || elem == "SM")) {}
+		else if((!isNaN(left) && !isNaN(right)) || !isNaN(start) || (!isNaN(secant0) && !isNaN(secant1)) || 
+			rows[3].length > 0 || rows[5].length > 0 || rows[7].length > 0 || indicator) {
 			console.log("------------------------------------------------------------------------------------------------------");
 			console.log("");
 		}
 	}
 	catch(prob) {
-		console.log("There was a problem parsing either the function, starting point, or error you provided!");	
+		console.log("There was a problem parsing either the function or error (possibly both) you provided!");	
 	}
 });

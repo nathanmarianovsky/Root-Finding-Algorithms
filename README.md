@@ -42,5 +42,12 @@ The output will always be up to 15 significant digits.
 
 In the terminal simply run:
 ```js
-node index.js
+node index.js -param
 ```
+For the parameter you have the following options:
+- If one is not given then all possible algorithms will be calculated.
+- If param = all then all possible algorithms will be calculated.
+- If param = BM then only the Bisection Method will be calculated.
+- If param = NM then only Newton's Method will be calculated.
+- If param = HM then only Halley's Method will be calculated.
+- If param = SM then only the Secant Method will be calculated.
