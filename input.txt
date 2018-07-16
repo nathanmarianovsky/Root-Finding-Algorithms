@@ -1,6 +1,12 @@
-Function:
-f(x) = x^2 - 2
-Interval:
-[0,2]
+Function (You are allowed to input any standard function such as the exponential, logarithm, cosine, etc...):
+f(x) = x^3 - x^2 - 7
+Interval (For Bisection Method):
+[0,4]
+Starting Point (For Newton's Method):
+2
 Error:
-0.000001
+0.0000000001
+
+Notes:
+You can avoid running the Bisection Method on top of all the other algorithms by simply keeping line 4 blank.
+Similarly you can run the Bisection Method strictly alone by keeping line 6 blank.
