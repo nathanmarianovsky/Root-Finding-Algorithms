@@ -2,14 +2,14 @@ Function (You are allowed to input any standard function such as the exponential
 f(x) = x^3 - x^2 - 7
 Interval (For Bisection Method):
 [2,3]
-Starting Point (For Newton's Method):
+Starting Point (For Newton's Method & Halley's Method):
 2
 Starting Points (For Secant Method):
-[2,3]
+[1,2]
 Error:
 0.0000000001
 
 General Notes:
-If a proper interval is not provided on line 4, then the Bisection Method will not run.
-If a starting point is not provided on line 6, then Newton's Method will not run.
-If starting points are not provided on line 8 in the form [x_0,x_1], then the Secant Method will not run.
+- If a proper interval is not provided on line 4, then the Bisection Method will not run.
+- If a starting point is not provided on line 6, then Newton's Method and Halley's Method will not run.
+- If starting points are not provided on line 8 in the form [x_0,x_1], then the Secant Method will not run.
