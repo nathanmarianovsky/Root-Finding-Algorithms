@@ -30,7 +30,7 @@ This will handle the installation of all node_modules.
 
 # Changing the Input
 
-Inside of input.txt you will find the four lines that correspond to the function, interval, starting point, and error input. For the function keep it in the form <a href="https://www.codecogs.com/eqnedit.php?latex=f(x)&space;=&space;\textsc{something}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f(x)&space;=&space;\textsc{something}" title="f(x) = \textsc{something}" /></a> and use the symbols +, -, *, /, and ^ to represent addition, subtraction, multiplication, division, and exponentiation respectively. You are also allowed to use any standard function such as the exponential, logarithm, cosine, etc...
+Inside of input.txt you will find the five lines that correspond to the function, interval for Bisection Method, starting point for Newton's/Halley's Method, starting points for Secant Method, and error input. For the function keep it in the form <a href="https://www.codecogs.com/eqnedit.php?latex=f(x)&space;=&space;\textsc{something}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f(x)&space;=&space;\textsc{something}" title="f(x) = \textsc{something}" /></a> and use the symbols +, -, *, /, and ^ to represent addition, subtraction, multiplication, division, and exponentiation respectively. You are also allowed to use any standard function such as the exponential, logarithm, cosine, etc...
 
 
 # Expected Output
