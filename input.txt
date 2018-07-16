@@ -1,12 +1,15 @@
 Function (You are allowed to input any standard function such as the exponential, logarithm, cosine, etc...):
 f(x) = x^3 - x^2 - 7
 Interval (For Bisection Method):
-[0,4]
+[2,3]
 Starting Point (For Newton's Method):
 2
+Starting Points (For Secant Method):
+[2,3]
 Error:
 0.0000000001
 
-Notes:
-You can avoid running the Bisection Method on top of all the other algorithms by simply keeping line 4 blank.
-Similarly you can run the Bisection Method strictly alone by keeping line 6 blank.
+General Notes:
+If a proper interval is not provided on line 4, then the Bisection Method will not run.
+If a starting point is not provided on line 6, then Newton's Method will not run.
+If starting points are not provided on line 8 in the form [x_0,x_1], then the Secant Method will not run.

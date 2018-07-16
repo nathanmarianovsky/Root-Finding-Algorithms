@@ -16,6 +16,7 @@ Given a continuous function <a href="https://www.codecogs.com/eqnedit.php?latex=
 
 - Bisection Method
 - Newton's Method
+- Secant Method
 
 
 # Setting Up
