@@ -1,0 +1,23 @@
+{
+  "name": "root-finding-algorithms",
+  "version": "1.0.0",
+  "description": "computes the root of a function",
+  "main": "index.js",
+  "dependencies": {
+    "mathjs": "^9.4.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathanmarianovsky/Root-Finding-Algorithms.git"
+  },
+  "author": "Nathan Marianovsky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nathanmarianovsky/Root-Finding-Algorithms/issues"
+  },
+  "homepage": "https://github.com/nathanmarianovsky/Root-Finding-Algorithms#readme"
+}

@@ -165,11 +165,11 @@ fs.readFile("input.txt", "utf8", (err, data) => {
 		indicator = process.argv.some(elem => elem == "-all") || process.argv.length == 2,
 		parser = new math.parser();
 	try {
-		parser.eval(rows[1]);
+		parser.evaluate(rows[1]);
 		var attempt1 = math.derivative(rows[1].split("=")[1], rows[1].split("f(")[1][0]).toString();
-		parser.eval("g(x) = " + attempt1);
+		parser.evaluate("g(x) = " + attempt1);
 		var attempt2 = math.derivative(attempt1, rows[1].split("f(")[1][0]).toString();
-		parser.eval("h(x) = " + attempt2);
+		parser.evaluate("h(x) = " + attempt2);
 		var func = parser.get("f"),
 			der = parser.get("g"),
 			secder = parser.get("h");
